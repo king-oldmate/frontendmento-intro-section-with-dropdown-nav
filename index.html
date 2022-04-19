@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+  </style>
+</head>
+<body>
+  <div id="shadowBox" onclick="closeNav()"></div>
+  <header>
+    <img class="logo" src="images/logo.svg" alt="logo">
+    <!-- topnav start -->
+    <nav id="myTopNav">
+      <a href="#" id="features" onclick="listFeaturesTop()">Features <span id="featuresArrowTop" class="arrow closed"></span></a>
+      <div id="popupFeatures" class="hidden">
+        <ul>
+          <li><a href="#"><img src="images/icon-todo.svg">Todo List</a></li>
+          <li><a href="#"><img src="images/icon-calendar.svg">Calendar</a></li>
+          <li><a href="#"><img src="images/icon-reminders.svg">Reminders</a></li>
+          <li><a href="#"><img src="images/icon-planning.svg">Planning</a></li>
+        </ul>
+      </div>
+      <a href="#" onclick="listCompanyTop()">Company <span id="companyArrowTop" class="arrow closed"></span></a>
+        <div id="popupCompany" class="hidden">
+          <ul>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+      <a href="">Careers</a>
+      <a href="">About</a>
+    </nav>
+    <!-- topnav end -->
+    <div class="login-register">
+      <span class="login"><a href="">Login</a></span><span class="register"><a href="">Register</a></span>
+    </div>
+    <span class="menuButton" onclick="openNav()">&#9776;</span>
+  </header>
+
+
+  <!-- sidenav start -->
+  <nav id="mySidenav" class="sidenav">
+    <a href="#" class="closeButton" onclick="closeNav()">&times;</a>
+    <a href="#" id="features" class="closed" onclick="listFeatures()">Features <span id="featuresArrow" class="arrow closed"></span></a> 
+      <div id="featuresBox" class="sideSubnav hidden">
+        <ul>
+          <li><a href="#"><img src="images/icon-todo.svg">Todo List</a></li>
+          <li><a href="#"><img src="images/icon-calendar.svg">Calendar</a></li>
+          <li><a href="#"><img src="images/icon-reminders.svg">Reminders</a></li>
+          <li><a href="#"><img src="images/icon-planning.svg">Planning</a></li>
+        </ul>
+      </div>
+    <a href="#" class="closed" onclick="listCompany()">Company <span id="companyArrow" class="arrow closed"></span></a>
+      <div id="companyBox" class="sideSubnav hidden">
+        <ul>
+          <li><a href="#">History</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+    <a href="">Careers</a>
+    <a href="">About</a>
+
+    
+  </nav>
+  <!-- sidenav end -->
+
+  <main>
+    <img class="mobile-worker" src="images/image-hero-mobile.png" alt="mobile worker">
+    <div class="desktop-grid">
+      <h1>Make remote work</h1>
+
+      <p>Get your team in sync, no matter your location. Streamline processes, 
+      create team rituals, and watch productivity soar.</p>
+
+      <p id="learnButton"><a href="#">Learn more</a></p>
+
+      <section class="sponsorsidk">
+        <img src="images/client-databiz.svg" alt="">
+        <img src="images/client-audiophile.svg" alt="">
+        <img src="images/client-meet.svg" alt="">
+        <img src="images/client-maker.svg" alt="">
+      </section>
+    </div>
+    
+
+    <img class="desktop-worker" src="images\image-hero-desktop.png" alt="desktop worker">
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Raymond Zeaiter</a>.
+  </div>
+
+
+  <script src="main.js"></script>
+</body>
+</html>

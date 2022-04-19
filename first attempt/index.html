@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 2;
+      top: 0;
+      right: 0;
+      background-color: #fff;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    #shadowBox {
+      height: 100vh;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top:0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgba(0,0,0,0.4);
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Sidebar for mobile -->
+  <div id="shadowBox" onclick="closeNav()"></div>
+  <nav id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#" class="featuresbtn" onclick="sideNavFeatures()">Features</a>
+      <ul id="sideNavFeaturesList" class="sideNav features-list hidden">
+        <li>1</li>
+        <li>2</li>
+        <li>4</li>
+        <li>3</li>
+      </ul>
+    <a href="#" class="companybtn" onclick="sideNavCompany()">Company</a>
+      <ul id="sideNavCompanyList" class="sideNav company-list hidden">
+        <li>1</li>
+        <li>2</li>
+        <li>4</li>
+        <li>3</li>
+      </ul>
+    <a href="#">Careers</a>
+    <a href="#">About</a>
+  </nav>
+
+<!-- header for mobile -->
+  <div id="logo">
+    <img src="images/logo.svg" alt="">
+    <span style="cursor:pointer" id="navMenuButton" onclick="openNav()">&#9776;</span>
+  </div>
+
+<div id="wrapper">
+
+  <!-- header for desktop -->
+  <header>
+  
+    <nav id="horizontal-nav">
+      <ul>
+        <li>Features</li>
+        <li>Company</li>
+        <li>Careers</li>
+        <li>About</li>
+      </ul>
+    </nav>
+    <div class="login">
+      Login
+      Register
+    </div>
+  </header>
+
+
+  <section id="main">
+      <img id="mobilegraphic" src="images\image-hero-mobile.png" alt="">
+    <div id="landing">
+      <h1>Make remote work</h1>
+      <p>
+        Get your team in sync, no matter your location. Streamline processes, 
+      create team rituals, and watch productivity soar.
+      </p>
+
+      <p><a href="#" id="learnMoreButton">Learn more</a></p>
+    </div>
+    <div id="graphic-container">
+      <img id="desktopgraphic" src="images\image-hero-desktop.png" alt="">
+    </div>
+  </section>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("shadowBox").style.width = "100%"
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("shadowBox").style.width = "0"
+    }
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>
